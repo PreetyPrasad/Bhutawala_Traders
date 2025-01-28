@@ -1,0 +1,6 @@
+@inventroy_HostAddress = http://localhost:5219
+
+GET {{inventroy_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
