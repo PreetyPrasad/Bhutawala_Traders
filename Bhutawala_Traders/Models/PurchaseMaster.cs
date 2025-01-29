@@ -8,6 +8,7 @@ namespace Bhutawala_Traders.Models
         {
             InwardStocks=new HashSet<InwardStock>();
             PurchasePayments=new HashSet<PurchasePayment>();
+            PurchaseReturns=new HashSet<PurchaseReturn>();
         }
         [Key]
         public int PurchaseId { get; set; }
@@ -32,5 +33,6 @@ namespace Bhutawala_Traders.Models
 
         public ICollection<InwardStock> InwardStocks { get; set; }
         public ICollection<PurchasePayment> PurchasePayments { get; set; }
+        public ICollection<PurchaseReturn> PurchaseReturns { get; set; }
     }
 }

@@ -6,13 +6,13 @@ namespace Bhutawala_Traders.Models
     {
         public Category()
         {
-            Categories=new HashSet<Category>();
+            Materials=new HashSet<Material>();
         }
 
         [Key] 
         public int CategoryId { get; set; }
         [Required]
         public string Name { get; set; } = string.Empty;
-        public ICollection<Category> Categories { get; set; }
+        public ICollection<Material> Materials { get; set; }
     }
 }
