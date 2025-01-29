@@ -13,5 +13,6 @@ namespace Bhutawala_Traders.Models
         public DateTime PaymentDate { get; set; }= DateTime.Now;
         public DateTime LogDate { get; set; }=DateTime.Now;
         public int StaffId { get; set; }
+        public int DemoId { get; set; }
     }
 }
