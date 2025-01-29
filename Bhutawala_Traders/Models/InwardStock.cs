@@ -7,6 +7,7 @@ namespace Bhutawala_Traders.Models
         public InwardStock()
         {
             SalesReturnDetails=new HashSet<SalesReturnDetail>();
+            PurchaseReturns = new HashSet<PurchaseReturn>();
         }
         [Key]
         public int StockId { get; set; }
@@ -27,5 +28,6 @@ namespace Bhutawala_Traders.Models
         public int StaffId { get; set; }
         public StaffMaster? StaffMasters { get; set; }
         public ICollection<SalesReturnDetail> SalesReturnDetails { get; set; }
+        public ICollection<PurchaseReturn>PurchaseReturns { get; set; }
     }
 }

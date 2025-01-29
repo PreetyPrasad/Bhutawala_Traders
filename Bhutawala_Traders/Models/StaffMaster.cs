@@ -12,6 +12,8 @@ namespace Bhutawala_Traders.Models
             CreditNotes = new HashSet<CreditNote>();
             CustomerInstallments=new HashSet<CustomerInstallment>();
             ApplyCredits = new HashSet<ApplyCredit>();
+            PurchaseReturns=new HashSet<PurchaseReturn>();
+            DebitNotes=new HashSet<DebitNote>();
         }
         [Key]
         public int StaffId { get; set; }
@@ -42,6 +44,8 @@ namespace Bhutawala_Traders.Models
         public ICollection<CreditNote> CreditNotes { get; set; }
         public ICollection<CustomerInstallment> CustomerInstallments { get; set; }
         public ICollection<ApplyCredit>ApplyCredits { get; set; }
+        public ICollection<PurchaseReturn> PurchaseReturns { get;set; }
+        public ICollection<DebitNote> DebitNotes { get; set; }
 
         }
     }
