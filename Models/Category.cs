@@ -4,13 +4,17 @@ namespace inventroy.Models
 {
     public class Category
     {
-        [Key] 
+       
          public Category()
-        {
-            Products = new HashSet<Product>();
-        }
+         {
+            Materials = new HashSet<Material>();
+
+         }
+        [Key]
         public int CategoryId { get; set; }
+        [Required]
         public string CategoryName { get; set; } = string.Empty;
+        public ICollection<Material> Materials { get; set; }
 
 
     }

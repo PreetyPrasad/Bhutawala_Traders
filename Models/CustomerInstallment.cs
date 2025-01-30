@@ -6,13 +6,22 @@ namespace inventroy.Models
     {
         [Key]
         public int CustomerInstallmentId { get; set; }
+        [Required]
         public int InvoicId { get; set; }
-        public double Amount { get; set; }
-        public string Paymentmode { get; set; } = string.Empty;
-        public string? RefNo { get; set; }
-        public DateTime PaymentDate { get; set; } = DateTime.Now; 
-        public DateTime LogDate { get; set; } = DateTime.Now;
 
+        public InvoiceDetail? InvoiceDetail { get; set; }
+        [Required]
+        public double Amount { get; set; }
+        [Required]
+        public string Paymentmode { get; set; } = string.Empty;
+        [Required]
+        public string? RefNo { get; set; }
+        [Required]
+        public DateTime PaymentDate { get; set; } = DateTime.Now;
+        [Required]
+        public DateTime LogDate { get; set; } = DateTime.Now;
+        public int StaffId { get; set; }
+        public StaffMaster? StaffMaster { get; set; }
 
     }
 }
