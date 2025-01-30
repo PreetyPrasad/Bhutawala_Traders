@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Bhutawala_Traders.Models
 {
@@ -11,8 +12,8 @@ namespace Bhutawala_Traders.Models
         }
         [Key]
         public int InvoiceDetailId { get; set; }
+        [ForeignKey(nameof(Material))]
         public int MaterialId { get; set; }
-        public Material? Material { get; set; }
         [Required]
         public double Rate { get; set; }
         [Required]

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Bhutawala_Traders.Models
 {
@@ -34,8 +35,8 @@ namespace Bhutawala_Traders.Models
         [Required]
         public double GSTIN { get; set; }
         [Required]
+        [ForeignKey(nameof(StaffMaster))]
         public int StaffId { get; set; }
-        public StaffMaster? StaffMasters {  get; set; }
 
         public ICollection<CreditNote> CreditNotes { get; set; }
         public ICollection<SalesReturnDetail>SalesReturnDetails { get; set; }

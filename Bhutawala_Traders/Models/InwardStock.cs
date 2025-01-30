@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Bhutawala_Traders.Models
 {
@@ -11,10 +12,10 @@ namespace Bhutawala_Traders.Models
         }
         [Key]
         public int StockId { get; set; }
+        [ForeignKey(nameof(Material))]
         public int MaterialId { get; set; }
-        public Material? Materials {  get; set; }
+        [ForeignKey(nameof(PurchaseMaster))]
         public int PurchaseId { get; set; }
-        public PurchaseMaster? PurchaseMasters { get; set; }
         [Required]
         public double Qty { get; set; }
         [Required]
@@ -25,8 +26,8 @@ namespace Bhutawala_Traders.Models
         public DateTime RecieveDate { get; set; }=DateTime.Now;
         [Required]
         public string? Note { get; set; }
+        [ForeignKey(nameof(StaffMaster))]
         public int StaffId { get; set; }
-        public StaffMaster? StaffMasters { get; set; }
         public ICollection<SalesReturnDetail> SalesReturnDetails { get; set; }
         public ICollection<PurchaseReturn>PurchaseReturns { get; set; }
     }

@@ -15,6 +15,8 @@ namespace Bhutawala_Traders.Models
         [Required]
         public string? ContactNo { get; set; }
         [Required]
+        public string? Email { get; set; }
+        [Required]
         public string? Address { get; set; }
         [Required]
         public string? City { get; set; }
@@ -24,10 +26,8 @@ namespace Bhutawala_Traders.Models
         public string? PinCode { get; set; }
         [Required]
         public string? GSTIN { get; set; }
-        [Required]
         public string? PAN { get; set; }
-        [Required]
-        public string? BankBranch { get; set; }
+        public string? AccountHolder { get; set; }
         [Required]
         public string? IFSC { get; set; }
         [Required]
@@ -36,9 +36,6 @@ namespace Bhutawala_Traders.Models
         public string? BankName { get; set; }
         [Required]
         public DateTime LogDate { get; set; }= DateTime.Now;
-        [Required]
-        public string? Email { get; set; }
-
         public ICollection<PurchaseMaster> PurchaseMasters { get; set; }
     }
 }
