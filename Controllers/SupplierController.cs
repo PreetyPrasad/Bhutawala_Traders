@@ -27,9 +27,6 @@ namespace inventroy.Controllers
                     _dbContext.Suppliers.Add(supplier);
                     await _dbContext.SaveChangesAsync();
 
-
-
-
                     return Ok(new { Status = "Ok", Result = "Successfully Saved" });
                 }
                 else
